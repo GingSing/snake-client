@@ -1,4 +1,5 @@
 let connection;
+let { MOVE_LEFT_KEY, MOVE_DOWN_KEY, MOVE_RIGHT_KEY, MOVE_UP_KEY } = require('./constants');
 
 const setupInput = function(conn) {
   connection = conn;
@@ -17,16 +18,16 @@ const handleUserInput = function(command, conn) {
 
   switch(command){
     case "w":
-      conn.write("Move: up");
+      conn.write(MOVE_UP_KEY);
       break;
     case "a":
-      conn.write("Move: left");
+      conn.write(MOVE_LEFT_KEY);
       break;
     case "s":
-      conn.write("Move: down");
+      conn.write(MOVE_DOWN_KEY);
       break;
     case "d":
-      conn.write("Move: right");
+      conn.write(MOVE_RIGHT_KEY);
       break;
     case "e":
       conn.write("Say: Hello!");

@@ -28,6 +28,12 @@ const handleUserInput = function(command, conn) {
     case "d":
       conn.write("Move: right");
       break;
+    case "e":
+      conn.write("Say: Hello!");
+      break;
+    case "f":
+      conn.write("Say: Bye!");
+      break;
   }
 
   return command;
